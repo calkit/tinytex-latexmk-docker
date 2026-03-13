@@ -19,10 +19,19 @@ RUN tlmgr option repository "https://mirror.ctan.org/systems/texlive/tlnet" && \
             fontawesome \
             pgf \
             lastpage \
+            collection-latexrecommended \
+            collection-latexextra \
+            collection-fontsrecommended \
+            collection-bibtexextra \
+            collection-mathscience \
+            collection-pictures \
+            collection-publishers \
+            biber \
             latexmk \
             synctex \
             texcount \
             latexindent \
+            chktex \
             titlesec \
             marvosym \
             enumitem \
