@@ -29,6 +29,7 @@ RUN tlmgr option repository "https://mirror.ctan.org/systems/texlive/tlnet" && \
             preprint \
             opensans \
             revtex \
+            revtex4-1 \
             fontaxes && break; \
         echo "tlmgr failed on attempt ${i}/3, retrying in 15s..." >&2; \
         i=$((i + 1)); \
