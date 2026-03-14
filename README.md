@@ -19,7 +19,7 @@ docker run --rm -it \
 	-v "$HOME/.cache/tinytex":/root/.TinyTeX \
 	-w /work \
 	ghcr.io/calkit/tinytex-latexmk-docker:latest \
-	latexmk -pdf main.tex
+	texliveonfly --compiler "latexmk -pdf" main.tex
 ```
 
 Change `main.tex` to your document entrypoint.

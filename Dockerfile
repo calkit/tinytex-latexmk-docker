@@ -15,32 +15,13 @@ RUN tlmgr option repository "https://mirror.ctan.org/systems/texlive/tlnet" && \
     i=1; \
     until [ "$i" -gt 3 ]; do \
         tlmgr update --self && \
-        tlmgr install fancyhdr \
-            fontawesome \
-            pgf \
-            lastpage \
-            collection-latexrecommended \
-            collection-latexextra \
-            collection-fontsrecommended \
-            collection-bibtexextra \
-            collection-mathscience \
-            collection-pictures \
-            collection-publishers \
-            biber \
+        tlmgr install biber \
             latexmk \
-            synctex \
-            texcount \
             latexindent \
             chktex \
-            titlesec \
-            marvosym \
-            enumitem \
-            preprint \
-            opensans \
-            revtex \
-            revtex4-1 \
-            textcase \
-            fontaxes && break; \
+            texliveonfly \
+            synctex \
+            texcount && break; \
         echo "tlmgr failed on attempt ${i}/3, retrying in 15s..." >&2; \
         i=$((i + 1)); \
         sleep 15; \
